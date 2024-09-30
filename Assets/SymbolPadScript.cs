@@ -68,7 +68,9 @@ public class SymbolPadScript : MonoBehaviour
            portCount = ((BombInfo.GetPortCount() - 1) % 16) + 1; 
         }
 
-        Debug.LogFormat("[Symbol Pad #{0}] The starting cell is {1}.", _moduleId, portCount);
+        portCount--;
+
+        Debug.LogFormat("[Symbol Pad #{0}] The starting cell is {1}.", _moduleId, portCount + 1);
 
         arr = Enumerable.Range(0, 9).ToArray().Shuffle();
 
@@ -146,6 +148,8 @@ public class SymbolPadScript : MonoBehaviour
 
         var time = 0.4f;
 
+        //The Setup
+
         RealButtons[0].GetComponent<MeshRenderer>().material = Colors[4];
         yield return new WaitForSeconds(time);
         RealButtons[0].GetComponent<MeshRenderer>().material = Colors[3];
@@ -178,6 +182,9 @@ public class SymbolPadScript : MonoBehaviour
         RealButtons[7].GetComponent<MeshRenderer>().material = Colors[3];
         RealButtons[8].GetComponent<MeshRenderer>().material = Colors[4];
         yield return new WaitForSeconds(time);
+
+
+        //The loop
         while (true){
         RealButtons[0].GetComponent<MeshRenderer>().material = Colors[4];
         RealButtons[1].GetComponent<MeshRenderer>().material = Colors[0];

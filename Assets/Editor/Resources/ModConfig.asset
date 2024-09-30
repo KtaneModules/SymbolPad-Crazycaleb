@@ -14,7 +14,13 @@ MonoBehaviour:
   id: SymbolPad
   title: Symbol Pad
   author: Crazycaleb, Pruz
-  description: Press 9 buttons in a series of overlapping 4x4 grids.
+  description: 'Press 9 buttons in a series of overlapping 4x4 grids.
+
+
+    Module by Crazycaleb
+
+
+    Manual by Pruz'
   version: 1.0
   outputFolder: build
-  previewImage: {fileID: 2800000, guid: bd5c1f4881f57d54481b44e4c8a7779a, type: 3}
+  previewImage: {fileID: 2800000, guid: 4ec6f2eb560e89546bf1c85c468d8504, type: 3}
