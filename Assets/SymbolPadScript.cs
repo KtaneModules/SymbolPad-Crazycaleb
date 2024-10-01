@@ -127,6 +127,7 @@ public class SymbolPadScript : MonoBehaviour
         if (arr[progress] == borg){
             progress++;
             RealButtons[borg].GetComponent<MeshRenderer>().material = Colors[1];
+            Audio.PlaySoundAtTransform("ButtonPressSound", transform);
             if (progress == 9){
                 Debug.LogFormat("[Symbol Pad #{0}] Module Solved!", _moduleId);
                 Module.HandlePass();
@@ -145,7 +146,7 @@ public class SymbolPadScript : MonoBehaviour
     }
 
     IEnumerator SolveAnimation(){
-
+        Audio.PlaySoundAtTransform("SolveSound2", transform);
         var time = 0.4f;
 
         //The Setup
